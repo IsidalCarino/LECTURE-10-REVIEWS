@@ -72,3 +72,24 @@ int main()
 }
 
 ```
+# Factorial, While Loop
+```
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a, b = 1;
+	cout << "Enter a number to !: " << endl;
+	cin >> a;
+	while (cin.fail() || a <= 0)
+	{
+		cout << "Number pls! " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> a;
+	}
+	for (int c = 1; c <= a; c++)
+		b = b * c;
+	cout << "Factorial: " << b;
+}
+```
